@@ -1,0 +1,49 @@
+/* Universal Styles */
+
+html {
+  font-family: Helvetica;
+  font-size: 18px;
+}
+
+body {
+  margin: 0 auto;
+  width: 1080px;
+}
+
+/* Heading */
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  justify-content: space-between;
+}
+
+nav.desktop-nav {
+  display: flex;
+
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+nav.mobile-nav {
+  display: none;
+}
+
+/* Learn Something Section */
+
+/* Practicing Section */
+
+/* Learning Section */
+
+/* Thesis Section */
+
+/* Footer */
