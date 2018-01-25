@@ -1,30 +1,76 @@
 /* Universal Styles */
 
 html {
-  font-family: Helvetica;
-  font-size: 18px;
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  font-size: 16px;
 }
 
 body {
   margin: 0 auto;
-  width: 1080px;
+  width: 100%;
 }
+
+h1 {
+  font-weight: bold;
+}
+
 
 /* Heading */
 
 header {
-  position: fixed;
-  width: 100%;
-  height: 64px;
   display: flex;
   align-items: center;
-  padding: 0 24px;
-  justify-content: space-between;
+  background-color: white;
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  height: 64px;
 }
 
-nav.desktop-nav {
+.icon {
   display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: 24px;
+  margin-right: 8px;
+}
 
+.icon img {
+  height: 3rem;
+}
+
+header span {
+  color: rgb(122,122,122);
+  font-size: 1.5rem;
+}
+
+.colmar {
+  font-weight: bold;
+  color: black;
+}
+
+.academy {
+  color: rgb(122,122,122);
+}
+
+.desktop-nav {
+  margin-right: 24px;
+}
+
+.desktop-nav a {
+  color: black;
+  padding: 0.5rem;
+  color: rgb(64, 64, 64);
+}
+
+.desktop-nav a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.desktop-nav a:active {
+  color: rgb(42, 187, 255);
+  text-decoration: underline;
 }
 
 .logo {
@@ -33,17 +79,639 @@ nav.desktop-nav {
   align-items: center;
 }
 
-
-nav.mobile-nav {
+.mobile-nav {
   display: none;
+}
+
+@media only screen and (max-width: 720px) {
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-content: space-around;
+  }
+
+  .mobile-nav a:active {
+    background-color: rgb(170,170,170);
+  }
 }
 
 /* Learn Something Section */
 
+.banner-container {
+  display: flex;
+  width: 100%;
+  background-color: rgb(170,170,170);
+  position: relative;
+  z-index: 4;
+  top: 4rem;
+}
+
+.learn-main {
+  display: flex;
+  padding: 32px 24px;
+}
+
+.image-container {
+  display: flex;
+  width: 60%;
+  margin-right: 40px;
+}
+
+.banner-image img {
+  max-width: 100%;
+}
+
+.learn-something {
+  color: rgb(16,16,16);
+  margin-top: 3rem;
+  line-height: 1.3;
+  width: 22rem;
+  display: block;
+}
+
+.learn-something h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  width: 90%;
+}
+
+.learn-something p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  width: 90%;
+}
+
+.start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.start span a:hover {
+  color: white;
+}
+
+.start span a:active {
+  color: blue;
+  text-decoration: underline;
+}
+
+.learn-something span {
+  background-color: rgb(219,219,219);
+  padding: 8px 0px;
+  display: flex;
+  justify-content: center;
+  width: 85%;
+}
+
+.mobile-box {
+  display: none;
+}
+
+@media only screen and (max-width: 720px) {
+
+  .image-container {
+    display: none;
+  }
+
+  .banner-image {
+    display: none;
+  }
+
+  .learn-main {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .mobile-box {
+    display: flex;
+    width: 100%;
+    height: 18rem;
+  }
+
+  .mobile-box img{
+    max-width: 100%;
+  }
+
+  .learn-something {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    line-height: 1.4;
+    width: auto;
+  }
+
+  .learn-something h1 {
+    font-size: 2rem;
+    margin: 2rem 1rem;
+    width: auto;
+  }
+
+  .learn-something p {
+    font-size: 1.2rem;
+    margin: 0 1rem 1.5rem 1rem;
+    width: auto;
+  }
+
+  .start {
+    width: 100%;
+    margin-right: 1.8rem;
+  }
+
+  .learn-something span {
+    margin: 0 1rem 2rem 3rem;
+  }
+
+  .learn-something span a {
+    font-weight: 400;
+    font-size: 1.25rem;
+  }
+}
+
+
 /* Practicing Section */
+
+.practice-container {
+  width: 100%;
+  position: relative;
+  top: 4rem;
+  z-index: 3;
+  background-color: rgb(219,219,219);
+  display: flex;
+}
+
+.practice-body {
+  padding: 32px 0px 32px 24px;
+  display: flex;
+  color: rgb(16,16,16);
+}
+
+.practice-left {
+  margin-right: 24px;
+}
+
+.practice-image {
+  margin-bottom: 2rem;
+}
+
+.practice-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.practice-left h1 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+.practice-left p {
+  margin-bottom: 32px;
+}
+
+.practice-left span {
+  font-weight: 300;
+  font-size: 0.85rem;
+  margin-bottom: 32px;
+}
+
+.practice-right {
+  width: 423px;
+  display: flex;
+  flex-direction: column;
+}
+
+.textbox {
+  width: 423px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+.practice-imagedesktop {
+  width: 35%;
+}
+
+.practice-imagedesktop img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem;
+  border: 1px solid rgb(220,220,220);
+}
+
+#guest {
+  background-color: rgb(170,170,170);
+}
+
+.description {
+  color: rgb(16,16,16);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 2.5rem 1.5rem 3rem 2rem;
+}
+
+#lecture-mobile {
+  display: none;
+}
+
+.description h2 {
+
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  letter-spacing: .4px;
+}
+
+.description span {
+  font-weight: 300;
+  font-size: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.description a {
+  color: blue;
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.description a:hover {
+  text-decoration: underline;
+}
+
+.description a:active {
+  color: rgb(42, 187, 255);
+  text-decoration: underline;
+}
+
+#oliver {
+  margin: 0;
+  line-height: 2;
+}
+
+.practice-imagemobile {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .practice-container {
+    width: 100%;
+    padding: 0rem;
+    margin: 0rem;
+  }
+
+  .practice-body {
+    margin: 1rem;
+    padding: 0rem;
+  }
+
+  .practice-left {
+    display: none;
+  }
+
+  .practice-right {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .textbox {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .practice-imagedesktop {
+    display: none;
+  }
+
+  .practice-imagemobile {
+    display: block;
+    width: 100%;
+    padding: 0rem;
+  }
+
+  .practice-imagemobile img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .description {
+    margin: 1rem 0 1rem 1rem;
+    padding: 0rem;
+  }
+
+  #lecture-mobile {
+    display: block;
+    font-weight: 500;
+  }
+
+  .description h2 {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    padding: 0;
+  }
+
+  .description span {
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .description a {
+    font-size: 0.9rem;
+    margin-bottom: 0rem;
+  }
+
+  #lecture {
+    display: none;
+  }
+
+  #guest {
+    margin-right: auto;
+  }
+
+}
 
 /* Learning Section */
 
+.learning-container {
+  position: relative;
+  z-index: 2;
+  top: 4rem;
+  background-color: rgb(170,170,170);
+  padding-bottom: 1.5rem;
+}
+
+.learning-container h1 {
+  color: rgb(16,16,16);
+  font-size: 2rem;
+  padding: 2rem 0 1.5rem 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+.learning-grid {
+  color: rgb(64,64,64);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 1.5rem;
+  line-height: 1.15;
+}
+
+.subject-containers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.subject-container {
+  height: 276px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 1rem;
+  background-color: white;
+}
+
+.subject-image {
+  margin: 0;
+  padding: 0;
+}
+
+.subject-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.subject-description {
+  margin: 0;
+  padding: 0 16px;
+}
+
+.subject-description h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0.9rem 0rem 0.5rem 1rem;
+  padding: 0;
+}
+
+.subject-description span {
+  display: inline-block;
+  margin: 0 0 0.5rem 1rem;
+  color: rgb(52,89,97);
+  font-size: 0.85rem;
+}
+
+.subject-description span, p {
+    font-weight: 300;
+}
+
+.subject-description p {
+  margin: 0 0 1.5rem 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .subject-image img {
+    display: none;
+  }
+
+  .subject-description span, p {
+    display: none;
+  }
+
+  .learning-container {
+    padding-bottom: 32px;
+  }
+
+  .learning-container h1 {
+    padding: 2rem 0 1rem 0;
+  }
+
+  .subject-description h2 {
+    align-items: center;
+  }
+
+  .subject-container {
+    height: 3.2rem;
+    width: 90%;
+    margin: 0.5rem;
+    padding: 0;
+    background-color: lightgray;
+  }
+
+}
+
 /* Thesis Section */
 
+#main.learning-container {
+  background-color: rgb(219,219,219);
+  padding-bottom: 0;
+}
+
+#exhibit {
+  color: rgb(16,16,16);
+  font-size: 2rem;
+  padding: 32px 0 32px 0;
+  width: 100%;
+  text-align: center;
+}
+
+#main.practice-body {
+  padding-top: 0rem;
+}
+
+#main.practice-left {
+  margin-right: 1rem;
+}
+
+.video {
+  margin-bottom: 1.5rem;
+}
+
+#main.practice-left h2 {
+  font-size: 1.5rem;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+#main.practice-left p {
+  margin-bottom: 0;
+}
+
+#prototype.practice-right {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.textbox.variant {
+  background-color: rgb(240,240,240);
+}
+
+#prototype.textbox {
+  width: 423px;
+  height: auto;
+}
+
+#text {
+  margin: 0;
+  line-height: 2;
+}
+
+@media only screen and (max-width: 600px) {
+
+  #prototype.practice-right {
+    display: none;
+  }
+
+  #main.practice-left {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+
+  #main.practice-left h2, p {
+    display: none;
+  }
+
+  #main.learning-container {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  #main.practice-body {
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .video {
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 1.5rem;
+    margin: 0
+  }
+
+  .video video {
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+}
+
 /* Footer */
+
+footer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  top: 3rem;
+  background-color: white;
+  height: 1.5rem;
+  max-width: 100%;
+  padding: 1.5rem;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+footer span {
+  flex-grow: 1;
+  padding-left: 24px;
+}
+
+footer nav a {
+  padding: 0 0.5rem;
+  text-decoration: none;
+  color: black;
+}
+
+footer nav a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+footer nav a:active {
+  color: rgb(42, 187, 255);
+  text-decoration: underline;
+}
+
+.social {
+  position: relative;
+  text-align: center;
+}
+
+.social i {
+  margin: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  footer nav a {
+    display: none;
+  }
+}
